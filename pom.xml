@@ -4,16 +4,9 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.1.5</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
-
 	<groupId>io.gitlab.zww1990</groupId>
 	<artifactId>c3p0-spring-boot-starter</artifactId>
-	<version>1.0.0-RELEASE</version>
+	<version>1.0.1-RELEASE</version>
 
 	<name>c3p0-spring-boot-starter</name>
 	<description>Spring Boot with c3p0 support, help you simplify c3p0 config in Spring Boot.</description>
@@ -39,7 +32,6 @@
 	</developers>
 
 	<scm>
-		<tag>main</tag>
 		<url>https://gitlab.com/zww1990/c3p0-spring-boot-starter</url>
 		<connection>git@gitlab.com:zww1990/c3p0-spring-boot-starter.git</connection>
 		<developerConnection>git@gitlab.com:zww1990/c3p0-spring-boot-starter.git</developerConnection>
@@ -48,7 +40,20 @@
 	<properties>
 		<java.version>17</java.version>
 		<c3p0.version>0.9.5.5</c3p0.version>
+		<spring-boot.version>3.1.5</spring-boot.version>
 	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring-boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<dependencies>
 		<!-- c3p0 -->
@@ -109,6 +114,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.1.2</version>
 						<configuration>
 							<skip>true</skip>
 						</configuration>
@@ -150,6 +156,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.1.2</version>
 						<configuration>
 							<skip>true</skip>
 						</configuration>
@@ -158,6 +165,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-source-plugin</artifactId>
+						<version>3.3.0</version>
 						<executions>
 							<execution>
 								<id>attach-sources</id>
@@ -171,6 +179,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-javadoc-plugin</artifactId>
+						<version>3.5.0</version>
 						<executions>
 							<execution>
 								<id>attach-javadocs</id>
