@@ -13,10 +13,37 @@
 	
 	<groupId>io.gitlab.zww1990</groupId>
 	<artifactId>c3p0-spring-boot-starter</artifactId>
+	<version>1.0.0-RELEASE</version>
+
 	<name>c3p0-spring-boot-starter</name>
-	<version>0.0.1-SNAPSHOT</version>
 	<description>Spring Boot with c3p0 support, help you simplify c3p0 config in Spring Boot.</description>
 	<url>https://gitlab.com/zww1990/c3p0-spring-boot-starter</url>
+
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>https://gitlab.com/zww1990/c3p0-spring-boot-starter/-/blob/main/LICENSE</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>zhangweiwei</id>
+			<name>张维维</name>
+			<email>zww1990@foxmail.com</email>
+			<url>https://gitlab.com/zww1990</url>
+			<roles>
+				<role>owner</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<scm>
+		<tag>main</tag>
+		<url>git@gitlab.com:zww1990/c3p0-spring-boot-starter.git</url>
+		<connection>git@gitlab.com:zww1990/c3p0-spring-boot-starter.git</connection>
+		<developerConnection>git@gitlab.com:zww1990/c3p0-spring-boot-starter.git</developerConnection>
+	</scm>
 	
 	<properties>
 		<java.version>17</java.version>
@@ -66,8 +93,30 @@
 		</dependency>
 	</dependencies>
 
+	<distributionManagement>
+	  <snapshotRepository>
+	    <id>ossrh</id>
+	    <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+	  </snapshotRepository>
+	  <repository>
+	    <id>ossrh</id>
+	    <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+	  </repository>
+	</distributionManagement>
+
 	<build>
 		<plugins>
+			<plugin>
+		      <groupId>org.sonatype.plugins</groupId>
+		      <artifactId>nexus-staging-maven-plugin</artifactId>
+		      <version>1.6.7</version>
+		      <extensions>true</extensions>
+		      <configuration>
+		        <serverId>ossrh</serverId>
+		        <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+		        <autoReleaseAfterClose>true</autoReleaseAfterClose>
+		      </configuration>
+		    </plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -79,14 +128,40 @@
 			    <groupId>org.apache.maven.plugins</groupId>
 			    <artifactId>maven-source-plugin</artifactId>
 			    <executions>
-	                <execution>
-	                    <phase>package</phase>
-	                    <goals>
-	                        <goal>jar</goal>
-	                    </goals>
-	                </execution>
-            	</executions>
+			        <execution>
+			          <id>attach-sources</id>
+			          <goals>
+			            <goal>jar-no-fork</goal>
+			          </goals>
+			        </execution>
+			    </executions>
 			</plugin>
+			<plugin>
+		      <groupId>org.apache.maven.plugins</groupId>
+		      <artifactId>maven-javadoc-plugin</artifactId>
+		      <executions>
+		        <execution>
+		          <id>attach-javadocs</id>
+		          <goals>
+		            <goal>jar</goal>
+		          </goals>
+		        </execution>
+		      </executions>
+		    </plugin>
+		    <plugin>
+		      <groupId>org.apache.maven.plugins</groupId>
+		      <artifactId>maven-gpg-plugin</artifactId>
+		      <version>1.5</version>
+		      <executions>
+		        <execution>
+		          <id>sign-artifacts</id>
+		          <phase>verify</phase>
+		          <goals>
+		            <goal>sign</goal>
+		          </goals>
+		        </execution>
+		      </executions>
+		    </plugin>
 		</plugins>
 	</build>
 
