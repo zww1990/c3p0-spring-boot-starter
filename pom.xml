@@ -40,7 +40,7 @@
 
 	<scm>
 		<tag>main</tag>
-		<url>git@gitlab.com:zww1990/c3p0-spring-boot-starter.git</url>
+		<url>https://gitlab.com/zww1990/c3p0-spring-boot-starter</url>
 		<connection>git@gitlab.com:zww1990/c3p0-spring-boot-starter.git</connection>
 		<developerConnection>git@gitlab.com:zww1990/c3p0-spring-boot-starter.git</developerConnection>
 	</scm>
