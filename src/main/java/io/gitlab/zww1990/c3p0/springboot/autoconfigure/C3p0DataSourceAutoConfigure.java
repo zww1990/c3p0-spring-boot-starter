@@ -20,7 +20,7 @@ import java.beans.PropertyVetoException;
  * @author zww1990
  * @since 2023-10-31 21:12:57
  */
-@Configuration
+@Configuration(proxyBeanMethods = false)
 @ConditionalOnClass(ComboPooledDataSource.class)
 @AutoConfigureBefore(DataSourceAutoConfiguration.class)
 @EnableConfigurationProperties({C3p0DataSourceProperties.class})
@@ -28,7 +28,7 @@ import java.beans.PropertyVetoException;
 public class C3p0DataSourceAutoConfigure {
     @Bean(destroyMethod = "close")
     @ConditionalOnMissingBean
-    DataSource dataSource(C3p0DataSourceProperties properties) throws Exception {
+    DataSource dataSource(C3p0DataSourceProperties properties) {
         log.info("initial c3p0 data source.");
         ComboPooledDataSource source = new ComboPooledDataSource();
         PropertyMapper mapper = PropertyMapper.get();
