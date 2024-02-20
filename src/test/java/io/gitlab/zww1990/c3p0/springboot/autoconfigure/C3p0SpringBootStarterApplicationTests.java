@@ -15,6 +15,7 @@ public class C3p0SpringBootStarterApplicationTests {
 
 	@Test
 	public void testContextLoads() {
+		System.err.println(this.context.getBeanDefinitionCount());
 		C3p0DataSourceAutoConfigure configure = context.getBean(C3p0DataSourceAutoConfigure.class);
 		System.err.println(configure.getClass());
 		JdbcTemplate jdbcTemplate = context.getBean(JdbcTemplate.class);
