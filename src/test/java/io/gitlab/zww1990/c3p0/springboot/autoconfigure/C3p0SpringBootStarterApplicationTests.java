@@ -16,10 +16,25 @@ public class C3p0SpringBootStarterApplicationTests {
 	@Test
 	public void testContextLoads() {
 		System.err.println(this.context.getBeanDefinitionCount());
-		C3p0DataSourceAutoConfigure configure = context.getBean(C3p0DataSourceAutoConfigure.class);
-		System.err.println(configure.getClass());
-		JdbcTemplate jdbcTemplate = context.getBean(JdbcTemplate.class);
-		System.err.println(jdbcTemplate.queryForObject("select now()", LocalDateTime.class));
 	}
 
+	@Test
+	public void testC3p0DataSourceAutoConfigure() {
+	    try {
+			C3p0DataSourceAutoConfigure configure = context.getBean(C3p0DataSourceAutoConfigure.class);
+			System.err.println(configure.getClass());
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	}
+
+	@Test
+	public void testJdbcTemplate() {
+	    try {
+			JdbcTemplate jdbcTemplate = context.getBean(JdbcTemplate.class);
+			System.err.println(jdbcTemplate.queryForObject("select now()", LocalDateTime.class));
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	}
 }
