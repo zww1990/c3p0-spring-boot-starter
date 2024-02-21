@@ -1,18 +1,25 @@
-# 入门指南
+# c3p0-spring-boot-starter
 
-### 参考文件
-为进一步参考，请考虑以下部分：
+Spring Boot with c3p0 support, help you simplify c3p0 config in Spring Boot.
 
-* [Apache Maven官方文档](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven插件参考指南](https://docs.spring.io/spring-boot/docs/3.1.3/maven-plugin/reference/html/)
-* [创建OCI映像](https://docs.spring.io/spring-boot/docs/3.1.3/maven-plugin/reference/html/#build-image)
-* [Spring 配置处理器](https://docs.spring.io/spring-boot/docs/3.1.3/reference/htmlsingle/index.html#appendix.configuration-metadata.annotation-processor)
-* [JDBC 应用程序接口](https://docs.spring.io/spring-boot/docs/3.1.3/reference/htmlsingle/index.html#data.sql)
+## Introduction
 
-### 指南
-以下指南说明了如何具体使用一些功能：
+Spring Boot with c3p0 support, help you simplify c3p0 config in Spring Boot.
 
-* [在Spring中使用JDBC访问关系数据](https://spring.io/guides/gs/relational-data-access/)
-* [管理事务处理](https://spring.io/guides/gs/managing-transactions/)
-* [访问数据使用 MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
+## Installation Guide
 
+1. Install necessary software:
+
+JDK, Maven, Git
+
+2. Clone this project:
+
+git clone https://gitlab.com/zww1990/c3p0-spring-boot-starter.git
+
+3. Compile the project:
+
+mvn compile
+
+## License
+
+This project is licensed under the MIT license.
