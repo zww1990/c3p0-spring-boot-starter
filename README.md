@@ -10,15 +10,15 @@ Spring Boot with c3p0 support, help you simplify c3p0 config in Spring Boot.
 
 1. Install necessary software:
 
-JDK, Maven, Git
+	JDK, Maven, Git
 
 2. Clone this project:
 
-git clone https://gitlab.com/zww1990/c3p0-spring-boot-starter.git
+	git clone https://gitlab.com/zww1990/c3p0-spring-boot-starter.git
 
 3. Compile the project:
 
-mvn compile
+	mvn compile
 
 ## License
 
