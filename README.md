@@ -23,3 +23,6 @@ Spring Boot with c3p0 support, help you simplify c3p0 config in Spring Boot.
 ## License
 
 This project is licensed under the MIT license.
+
+#### Thanks
+[![JetBrains Logo (Main) logo](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg)](https://jb.gg/OpenSourceSupport)
