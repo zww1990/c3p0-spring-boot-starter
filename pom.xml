@@ -40,7 +40,7 @@
 	<properties>
 		<java.version>17</java.version>
 		<c3p0.version>0.9.5.5</c3p0.version>
-		<spring-boot.version>3.2.4</spring-boot.version>
+		<spring-boot.version>3.2.5</spring-boot.version>
 		<nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
 		<maven.compiler.release>${java.version}</maven.compiler.release>
 		<maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
