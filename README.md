@@ -16,6 +16,10 @@ Spring Boot with c3p0 support, help you simplify c3p0 config in Spring Boot.
 
 	git clone https://github.com/zww1990/c3p0-spring-boot-starter.git
 
+	or
+
+    git clone https://gitee.com/zww1990/c3p0-spring-boot-starter.git
+
 3. Compile the project:
 
 	mvn compile
