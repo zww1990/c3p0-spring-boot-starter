@@ -1,7 +1,7 @@
-package io.gitlab.zww1990.c3p0.springboot.autoconfigure;
+package io.github.zww1990.c3p0.springboot.autoconfigure;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
-import io.gitlab.zww1990.c3p0.springboot.autoconfigure.properties.C3p0DataSourceProperties;
+import io.github.zww1990.c3p0.springboot.autoconfigure.properties.C3p0DataSourceProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;

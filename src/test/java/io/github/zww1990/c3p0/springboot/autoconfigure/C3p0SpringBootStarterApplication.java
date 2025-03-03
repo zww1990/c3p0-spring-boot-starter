@@ -1,4 +1,4 @@
-package io.gitlab.zww1990.c3p0.springboot.autoconfigure;
+package io.github.zww1990.c3p0.springboot.autoconfigure;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;

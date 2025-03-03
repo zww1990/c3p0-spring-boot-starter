@@ -1,4 +1,4 @@
-package io.gitlab.zww1990.c3p0.springboot.autoconfigure.properties;
+package io.github.zww1990.c3p0.springboot.autoconfigure.properties;
 
 import lombok.Getter;
 import lombok.Setter;

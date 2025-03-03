@@ -1,4 +1,4 @@
-package io.gitlab.zww1990.c3p0.springboot.autoconfigure;
+package io.github.zww1990.c3p0.springboot.autoconfigure;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
